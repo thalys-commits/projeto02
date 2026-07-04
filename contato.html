@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="pt-BR">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Formulário</title>
+        <!-- SEO básico-->
+         <meta name="description" content="Portfólio de Thálys - projetos, informações e contato">
+         <meta name="keywords" content="portfólio, front-end, projetos, contato, Thálys">
+         <meta name="author" content="Thálys">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+          
+          <div class="titulo">Bem-vindo ao meu site</div>
+          <nav>
+            <a href="index.html">Início</a>
+            <a href="sobre.html">Quem sou</a>
+            <a href="portfolio.html">Projetos</a>
+            <a href="contato.html" class="ativo">Contatos</a>
+          </nav>
+        </header>
+        <main>
+          <h1>Cadastre-se</h1>
+          <div class="formulario">
+          <form onsubmit="return validarFormulario()">
+            <div>
+            <input type="text" id="nome" placeholder="Seu nome">
+            </div>
+            <div>
+            <input type="email" id="email" placeholder="Seu email">
+            </div>
+            <div>
+            <!-- Campo para criar a senha -->
+            <div class="campo-senha">
+            <input type="password" id="senha" placeholder="Crie sua senha" oninput="validarRequisitos()">
+            <div id="requisitos">
+            <p id="req1">❌ Pelo menos 8 caracteres</p>
+            <p id="req2">❌ Uma letra maiúscula</p>
+            <p id="req3">❌ Um número</p>
+            <p id="req4">❌ Um caractere especial (!@#$%)</p>
+            </div>
+            </div>
+            </div>
+            <!-- Campo para confirmar a senha -->
+            <div>
+            <input type="password" id="confirmarSenha" placeholder="Confirme sua senha" oninput="validarConfirmacao()">
+            <!-- O evento oninput chama a função validarConfirmacao() sempre que o usuário digita -->
+            </div>
+            <div>
+            <button type="submit">Cadastrar</button>
+            </div>
+          </form>
+          </div>
+        </main>
+        <script src="javaScript.js"></script>
+    </body>
+</html>
